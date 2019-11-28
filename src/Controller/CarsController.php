@@ -84,8 +84,10 @@ class CarsController extends AbstractController
         $car->setVendor($params['vendor'])
             ->setModel($params['model'])
             ->setYear($params['year'])
-            ->setCreatedAt(new \DateTime())
             ->setUpdatedAt(new \DateTime());
+
+        $this->entityManager->persist($car);
+        $this->entityManager->flush();
 
         return new JsonResponse($this->mapEntityResponse($car));
     }
