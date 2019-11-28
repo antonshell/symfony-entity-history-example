@@ -1,0 +1,30 @@
+get_all:
+  path: /
+  controller: App\Controller\CarsController::getAll
+  methods: GET
+
+get_by_id:
+  path: /{id}
+  controller: App\Controller\CarsController::getById
+  methods: GET
+  requirements:
+    id: '\d+'
+
+create:
+  path: /
+  controller: App\Controller\CarsController::create
+  methods: POST
+
+update:
+  path: /{id}
+  controller: App\Controller\CarsController::update
+  methods: PUT
+  requirements:
+    id: '\d+'
+
+delete:
+  path: /{id}
+  controller: App\Controller\CarsController::delete
+  methods: DELETE
+  requirements:
+    id: '\d+'

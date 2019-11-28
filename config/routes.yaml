@@ -1,3 +1,7 @@
 index:
   path: /
   controller: App\Controller\MainController::index
+
+_cars:
+  resource: routes/cars.yml
+  prefix: /cars
