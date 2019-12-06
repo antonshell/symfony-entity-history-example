@@ -8,18 +8,6 @@ But it's just for demonstration purposes.
 There is database changes table structure:
 https://dbdiagram.io/d/5d88f707ff5115114db48b01
 
-There are some useful links:
-
-https://stackoverflow.com/questions/31563722/track-field-changes-on-doctrine-entity
-
-https://stackoverflow.com/questions/44640879/symfony-doctrine-log-changes-in-a-table-with-an-event-listener
-
-https://stackoverflow.com/questions/37831828/symfony-onflush-doctrine-listener
-
-https://stackoverflow.com/questions/39767032/onflush-listener-getting-entity-id-for-a-scheduled-entity-insertions
-
-https://stackoverflow.com/questions/28589633/symfony2-doctrine-postflush
-
 # Install
 
 1 . Clone repository
