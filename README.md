@@ -50,7 +50,7 @@ php bin/console doctrine:database:create
 OR
 
 ```
-CREATE DATABASE magento_220_integration_tests CHARACTER SET utf8 COLLATE utf8_general_ci;
+CREATE DATABASE entity_history_example CHARACTER SET utf8 COLLATE utf8_general_ci;
 ```
 
 5 . Apply migrations
