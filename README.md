@@ -31,14 +31,23 @@ git clone https://github.com/antonshell/symfony-entity-history-example.git
 2 . Install dependencies
 
 ```
+cd symfony-entity-history-example
 composer install
 ```
 
 3 . Configure database connection
 
 ```
-cp .env .env.local
 nano .env.local
+```
+
+```
+DB_USER=root
+DB_PASSWORD=password
+DB_HOST=localhost
+DB_PORT=3306
+DB_NAME=entity_history_example
+DATABASE_URL=mysql://${DB_USER}:${DB_PASSWORD}@${DB_HOST}:${DB_PORT}/${DB_NAME}?serverVersion=5.7
 ```
 
 4 . Create database
@@ -56,7 +65,7 @@ CREATE DATABASE entity_history_example CHARACTER SET utf8 COLLATE utf8_general_c
 5 . Apply migrations
 
 ```
-php bin/console doctrine:migrations:generate
+php bin/console doctrine:migrations:migrate
 ```
 
 6 . Run server  
