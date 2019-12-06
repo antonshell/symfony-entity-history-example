@@ -76,7 +76,6 @@ class EntitySubscriber implements EventSubscriber
                     $newValue = $this->convertValueToString($newValue);
 
                     $logChange = $this->logChangesService->logEntityUpdate(
-                        $entityClassName,
                         $entityId,
                         $tableName,
                         $columnName,
@@ -109,7 +108,6 @@ class EntitySubscriber implements EventSubscriber
             $tableName = $metaData->getTableName();
 
             $logChange = $this->logChangesService->logEntityDelete(
-                $entityClassName,
                 $entityId,
                 $tableName
             );
@@ -147,7 +145,6 @@ class EntitySubscriber implements EventSubscriber
             $tableName = $metaData->getTableName();
 
             $logChange = $this->logChangesService->logEntityInsert(
-                $entityClassName,
                 $entityId,
                 $tableName
             );

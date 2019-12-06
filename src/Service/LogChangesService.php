@@ -12,7 +12,6 @@ class LogChangesService
     private const DEFAULT_USER_ID = 1;
 
     public function logEntityUpdate(
-        string $entityClassName,
         string $entityId,
         string $tableName,
         string $columnName,
@@ -33,7 +32,7 @@ class LogChangesService
         return $dbChange;
     }
 
-    public function logEntityInsert(string $entityClassName, string $entityId, string $tableName): DbChange
+    public function logEntityInsert(string $entityId, string $tableName): DbChange
     {
         $dbChange = new DbChange();
         $dbChange
@@ -49,7 +48,7 @@ class LogChangesService
         return $dbChange;
     }
 
-    public function logEntityDelete(string $entityClassName, string $entityId, string $tableName): DbChange
+    public function logEntityDelete(string $entityId, string $tableName): DbChange
     {
         $dbChange = new DbChange();
         $dbChange
